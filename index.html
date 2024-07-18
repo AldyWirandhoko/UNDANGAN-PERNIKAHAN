@@ -177,5 +177,18 @@
         },
       });
     </script>
+
+    <script>
+      const sticky = document.querySelector(".sticky-top");
+      const offcanvas = document.querySelector(".offcanvas");
+
+      offcanvas.addEventListener("show.bs.offcanvas", function () {
+        sticky.style.overflow = "visible";
+      });
+
+      offcanvas.addEventListener("hidden.bs.offcanvas", function () {
+        sticky.style.overflow = "hidden";
+      });
+    </script>
   </body>
 </html>
